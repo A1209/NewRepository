@@ -81,7 +81,7 @@ function draw() {
   fill(10)
   text(e,70,440,100,100)
 
-  fill(50,205,50)
+  fill(46,224,85)
   ellipse(400,450,200,90)
 
   textSize(60)
