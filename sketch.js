@@ -9,9 +9,19 @@ function draw() {
   fill(0, 170, 255)
   rect(20, 20, 500, 600)
   textSize(25)
-  let a = 'CHEAP N CLEAN WATER'
+  let a = 'CHEAP'
   fill(10,10,10)
   text(a,180,50,100,100)
+
+  textSize(20)
+  let o = '    and'
+  fill(10,10,10)
+  text(o,180,90,100,100)
+
+  textSize(25)
+  let p = 'CLEAN'
+  fill(10,10,10)
+  text(p,180,130,100,100)
 
   textSize(45)
   let n = 'WATER'
