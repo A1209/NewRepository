@@ -1,6 +1,6 @@
+
 function setup() {
   createCanvas(windowWidth,windowHeight)
-
   // put setup code here
 }
 
@@ -10,14 +10,31 @@ function draw() {
   rect(20, 20, 500, 600)
   textSize(45)
   let a = 'CHEAP WATER'
-  fill(10)
+  fill(10,10,10)
   text(a,180,50,100,100)
 
-  fill(0, 170, 255)
-  rect(20, 20, 400, 500
+  textSize(18)
+  let k = 'Water sold'
+  fill(10,10,10)
+  text(k,120,170,100,100)
+
+  fill(255,255,255)
+  rect(120,200,130,40)
+
+  textSize(18)
+  let l = 'Money'
+  fill(10,10,10)
+  text(l,320,170,100,100)
+
+  textSize(18)
+  let m = 'earned'
+  fill(10,10,10)
+  text(m,380,170,100,100)
+
 
   textSize(16)
-  let b = 'ℓ = 1¢     Buy 3ℓ get 1ℓ free'
+  var b;
+  b= 'ℓ = 1¢\nBuy 3ℓ get 1ℓ free'
   fill(10)
   text(b,350,290,100,100)
 
@@ -51,10 +68,59 @@ function draw() {
   textSize(60)
   let f = 'PAY'
   fill(10)
-  text(f,370,400,100,100)
-
+  text(f,345,415,100,100)
 
   fill(0, 170, 255)
-  rect(20, 20, 1000, 2000)
+  rect(700, 20, 500, 600)
+
+  fill(200,200,200)
+  rect(760, 150, 300, 400)
+
+  fill(255,255,255)
+  circle(790,200,25,25)
+
+  fill(255,255,255)
+  circle(790,300,25,25)
+
+  fill(255,255,255)
+  circle(790,400,25,25)
+
+  fill(255,255,255)
+  circle(790,500,25,25)
+
+  fill(255,255,255)
+  rect(840,176, 200,50)
+
+  fill(255,255,255)
+  rect(840,276, 200,50)
+
+  fill(255,255,255)
+  rect(840,376, 200,50)
+
+  fill(255,255,255)
+  rect(840,476, 200,50)
+
+  textSize(25)
+  let g = 'Google Pay'
+  fill(10)
+  text(g,870,183,200,50)
+
+  textSize(25)
+  let h = 'Grab Pay'
+  fill(10)
+  text(h,880,283,200,50)
+
+  textSize(25)
+  let i = 'Apple Pay'
+  fill(10)
+  text(i,880,383,200,50)
+
+  textSize(25)
+  let j = 'Pay Pal'
+  fill(10)
+  text(j,890,483,200,50)
+
+
+
+
 }
-draw()
