@@ -8,15 +8,20 @@ function setup() {
 function draw() {
   fill(0, 170, 255)
   rect(20, 20, 500, 600)
-  textSize(45)
-  let a = 'CHEAP WATER'
+  textSize(25)
+  let a = 'CHEAP N CLEAN WATER'
   fill(10,10,10)
   text(a,180,50,100,100)
+
+  textSize(45)
+  let n = 'WATER'
+  fill(10,10,10)
+  text(n,300,70,100,100)
 
   textSize(18)
   let k = 'Water sold'
   fill(10,10,10)
-  text(k,120,170,100,100)
+  text(k,140,170,100,100)
 
   fill(255,255,255)
   rect(120,200,130,40)
@@ -30,6 +35,10 @@ function draw() {
   let m = 'earned'
   fill(10,10,10)
   text(m,380,170,100,100)
+
+  fill(255,255,255)
+  rect(310,200,130,40)
+
 
 
   textSize(16)
