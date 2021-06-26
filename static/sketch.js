@@ -1,173 +1,62 @@
-var mgr;
+
+
+var x, y;
+var score = 0;
+const radius = 80;
+var r, g, b;
+
+
 
 function setup() {
-  createCanvas(windowWidth,windowHeight);
-  mgr = new SceneManager()
-  mgr.addScene(homepage)
-  mgr.addScene(payPage)
-
-  mgr.showNextScene()
+  createCanvas(windowWidth, windowHeight);
+  x = random(windowWidth);
+  y = random(windowHeight);
+  r = (102);
+  g = (179);
+  b = (255);
 }
-
-
-
 
 function draw() {
-  mgr.draw()
+  background(250,210,79);
+  fill(247,247,59);
+  circle(800,130,200,200);
+  fill(250,210,79);
+  rect(700,130,290,170)
+  fill(68,213,52);
+  rect(1000,80,30,60);
+  rect(400,90,33,66);
+  rect(568,69,40,80);
+  rect(280,102,56,102)
+  rect(1200,409,90,180);
+  rect(35,587,102,204);
+  rect(308,370,98,196);
+  rect(870,250,48,96);
+  rect(120,123,34,68);
+  rect(680,267,83,166);
+  rect(1200,160,40,80);
+  rect(850,500,102,204);
+  noStroke();
+  fill(102,179,255);
+  ellipse(x, y, radius*2, radius*2);
+  textSize(24);
+  text("Score: " + score, 10, 30);
 }
-function homepage(){
-  this.setup = function(){
 
-    let col = color(46,224,85); //use color instead of fill
+function mousePressed() {
 
-      button = createButton(" PAY ");
-      button.style('font-size', '120px');
-      button.style('background-color', col);
-      button.position(290,380);
-      button.mousePressed(pay)
+  var d = dist(mouseX, mouseY, x, y);
+  if (d < radius) {
+    newCircle();
+    score++;
   }
 }
 
-  function draw() {
-    mgr.draw()
-  }
+function newCircle() {
+  x = random(windowWidth);
+  y = random(windowHeight);
+  r = (102);
+  g = (179);
+  b = (255);
+}
 
-
-  function pay(){
-    button.hide()
-    mgr.showScene(payPage)
-  }
-
-
-  this.draw = function(){
-    fill(0, 170, 255)
-    rect(20, 20, 500, 600)
-    textSize(25)
-    let a = 'CHEAP'
-    fill(10,10,10)
-    text(a,180,50,100,100)
-
-    textSize(20)
-    let o = '    and'
-    fill(10,10,10)
-    text(o,180,90,100,100)
-
-    textSize(25)
-    let p = 'CLEAN'
-    fill(10,10,10)
-    text(p,180,130,100,100)
-
-    textSize(45)
-    let n = 'WATER'
-    fill(10,10,10)
-    text(n,300,70,100,100)
-
-    textSize(18)
-    let k = 'Water sold'
-    fill(10,10,10)
-    text(k,140,170,100,100)
-
-    fill(255,255,255)
-    rect(120,200,130,40)
-
-    textSize(18)
-    let l = 'Money'
-    fill(10,10,10)
-    text(l,320,170,100,100)
-
-    textSize(18)
-    let m = 'earned'
-    fill(10,10,10)
-    text(m,380,170,100,100)
-
-    fill(255,255,255)
-    rect(310,200,130,40)
-
-    textSize(16)
-    var b;
-    b= 'ℓ = 1¢\nBuy 3ℓ get 1ℓ free'
-    fill(10)
-    text(b,350,290,100,100)
-
-    fill(230,251,255)
-    rect(70, 300, 200, 50)
-
-    fill(230,251,255)
-    rect(70, 390, 200, 50)
-
-    fill(230,251,255)
-    rect(70, 480, 200, 50)
-
-    textSize(15)
-    let c = 'Choose your language'
-    fill(10)
-    text(c,70,260,100,100)
-
-    textSize(15)
-    let d = 'Choose your reigon'
-    fill(10)
-    text(d,70,350,100,100)
-
-    textSize(15)
-    let e = 'Choose your country'
-    fill(10)
-    text(e,70,440,100,100)
-  }
-
-
-
-
-
-
-
-this.draw = function(){
-    fill(0, 170, 255)
-    rect(20, 20, 500, 600)
-
-    fill(200,200,200)
-    rect(60, 150, 300, 400)
-
-    fill(255,255,255)
-    circle(90,200,25,25)
-
-    fill(255,255,255)
-    circle(90,300,25,25)
-
-    fill(255,255,255)
-    circle(90,400,25,25)
-
-    fill(255,255,255)
-    circle(90,500,25,25)
-
-    fill(255,255,255)
-    rect(140,176, 200,50)
-
-    fill(255,255,255)
-    rect(140,276, 200,50)
-
-    fill(255,255,255)
-    rect(140,376, 200,50)
-
-    fill(255,255,255)
-    rect(140,476, 200,50)
-
-    textSize(25)
-    let g = 'Google Pay'
-    fill(10)
-    text(g,170,183,200,50)
-
-    textSize(25)
-    let h = 'Grab Pay'
-    fill(10)
-    text(h,180,283,200,50)
-
-    textSize(25)
-    let i = 'Apple Pay'
-    fill(10)
-    text(i,180,383,200,50)
-
-    textSize(25)
-    let j = 'Pay Pal'
-    fill(10)
-    text(j,190,483,200,50)
-  }
+setInterval(newCircle, 1000);
