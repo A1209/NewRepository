@@ -38,7 +38,7 @@ function draw() {
   noStroke();
   fill(102,179,255);
   ellipse(x, y, radius*2, radius*2);
-  textSize(24);
+  textSize(40);
   text("Score: " + score, 10, 30);
 }
 
