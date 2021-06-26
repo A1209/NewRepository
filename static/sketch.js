@@ -48,9 +48,7 @@ function draw() {
 
   fill(255,255,255)
   rect(310,200,130,40)
-
-
-
+  
   textSize(16)
   var b;
   b= 'ℓ = 1¢\nBuy 3ℓ get 1ℓ free'
@@ -138,8 +136,4 @@ function draw() {
   let j = 'Pay Pal'
   fill(10)
   text(j,890,483,200,50)
-
-
-
-
 }
