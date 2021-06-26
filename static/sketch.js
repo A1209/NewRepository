@@ -25,9 +25,14 @@ function homepage(){
       button.style('background-color', col);
       button.position(290,380);
       button.mousePressed(pay)
-
-
   }
+}
+
+  function draw() {
+    mgr.draw()
+  }
+
+
   function pay(){
     button.hide()
     mgr.showScene(payPage)
@@ -107,15 +112,15 @@ function homepage(){
     let e = 'Choose your country'
     fill(10)
     text(e,70,440,100,100)
-
-
   }
-}
 
 
 
-function payPage(){
-  this.draw = function(){
+
+
+
+
+this.draw = function(){
     fill(0, 170, 255)
     rect(20, 20, 500, 600)
 
@@ -166,4 +171,3 @@ function payPage(){
     fill(10)
     text(j,190,483,200,50)
   }
-}
