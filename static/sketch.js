@@ -18,10 +18,18 @@ function setup() {
 
 function draw() {
   background(250,210,79);
+  fill(110,247,257);
+  rect(0,0,1600,130)
+  fill(255,255,255);
+  ellipse(597,23,269,28);
+  fill(255,255,255);
+  ellipse(1068,49,269,28);
+  fill(255,255,255);
+  ellipse(69,35,269,28);
   fill(247,247,59);
   circle(800,130,200,200);
   fill(250,210,79);
-  rect(700,130,290,170)
+  rect(700,130,290,170);
   fill(68,213,52);
   rect(1000,80,30,60);
   rect(400,90,33,66);
@@ -35,6 +43,8 @@ function draw() {
   rect(680,267,83,166);
   rect(1200,160,40,80);
   rect(850,500,102,204);
+
+
   noStroke();
   fill(102,179,255);
   ellipse(x, y, radius*2, radius*2);
